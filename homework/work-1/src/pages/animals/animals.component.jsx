@@ -15,7 +15,7 @@ class Animals extends React.Component {
     render() {
         const { collections } = this.state;
         return (
-            <div className="shop-page">
+            <div className="shop-page d-flex flex-wrap">
             {collections.map(({ id, ...otherCollectionProps }) => (
                  <AnimalsCollection key={id} {...otherCollectionProps} />
             ))}

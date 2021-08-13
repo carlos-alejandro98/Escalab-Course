@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 const AnimalsCollection = ({ name, weight, imageUrl }) => {
   return (
-    <div className="collection-item d-flex">
+    <div className="collection-item d-flex my-5">
       <img className="image" src={imageUrl} />
       <div className="collection-footer d-flex flex-wrap text-center">
         <span className="name">Raza: {name}</span>

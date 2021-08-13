@@ -1,0 +1,8 @@
+@supports(object-fit: cover){
+    .box img{
+      width: 100%;
+      height: 25rem;
+      object-fit: initial;
+      object-position: center center;
+    }
+}

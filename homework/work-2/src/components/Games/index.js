@@ -1,8 +1,8 @@
 import React, { Fragment, useContext } from "react";
 import { GamesContext } from "../../context/GamesContext";
-import Games from "./Games";
+import GamesList from "./GamesList";
 
-const GamesIndex = () => {
+const Games = () => {
   const { doneGames, games } = useContext(GamesContext);
   return (
     <div className="works" id="games">
@@ -12,7 +12,7 @@ const GamesIndex = () => {
         </div>
         {doneGames ? (
           games.length ? (
-            <Games games={games} />
+            <GamesList games={games} />
           ) : null //<Message text={text} />
         ) : null //<ProgressBar />
         }
@@ -21,4 +21,4 @@ const GamesIndex = () => {
   );
 };
 
-export default GamesIndex;
+export default Games;

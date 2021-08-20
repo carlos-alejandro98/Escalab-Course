@@ -1,10 +1,10 @@
 import React from "react";
 import Game from "./Game";
 
-const Games = ({ games }) => {
-  console.log(games);
-  <>
-  {games.map((game) => {
+const GamesList = ({ games }) => (
+  <div className="row">
+    {games.map((game) => {
+      console.log(game.title);
       const { id, title, thumbnail, genre, platform } = game;
       return (
         <Game
@@ -16,7 +16,7 @@ const Games = ({ games }) => {
         />
       );
     })};
-  </>
-};
+  </div>
+);
 
-export default Games;
+export default GamesList;

@@ -2,7 +2,6 @@ import React from "react";
 
 const Game = ({id, title, thumbnail, genre}) => {
   return (
-    <div className="row">
       <div className="col-md-3">
         <div className="work-item">
           <img className="img-responsive" src={thumbnail} alt="" />
@@ -12,7 +11,6 @@ const Game = ({id, title, thumbnail, genre}) => {
           <span className="org">{genre}</span>
         </div>
       </div>
-    </div>
   );
 };
 

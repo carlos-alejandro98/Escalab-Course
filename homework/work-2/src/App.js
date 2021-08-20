@@ -9,7 +9,7 @@ import Banner from "./components/Common/Banner";
 import Footer from "./components/Common/Footer";
 
 import Header from "./components/Common/Header";
-import Games from "./components/Games/Games";
+import Games from "./components/Games";
 
 const App = () => (
     <BrowserRouter className="wrapper">

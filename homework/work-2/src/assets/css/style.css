@@ -113,6 +113,10 @@ header .navbar-brand img {
 	max-width: 50px;
 }
 
+.container h2{
+	color: #fb6c6c !important;
+}
+
 /*
  * Banner 
  */
@@ -122,6 +126,8 @@ header .navbar-brand img {
 	padding-top: 150px;
 	padding-bottom: 150px;
 	text-align: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
 .banner h2 {

@@ -13,6 +13,7 @@ const GamesList = ({ games }) => (
           thumbnail={thumbnail}
           genre={genre}
           platform={platform}
+          id={id}
         />
       );
     })};

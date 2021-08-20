@@ -1,6 +1,7 @@
-import React, { Fragment, useContext } from "react";
+import React, { useContext } from "react";
 import { GamesContext } from "../../context/GamesContext";
 import GamesList from "./GamesList";
+import ProgressBar from "../Common/ProgressBar";
 
 const Games = () => {
   const { doneGames, games } = useContext(GamesContext);
@@ -11,10 +12,8 @@ const Games = () => {
           <h2>Games</h2>
         </div>
         {doneGames ? (
-          games.length ? (
-            <GamesList games={games} />
-          ) : null //<Message text={text} />
-        ) : null //<ProgressBar />
+          <GamesList games={games} />
+        ) : <ProgressBar />
         }
       </div>
     </div>

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Details = ({ game, images, requirements }) => {
   const {
@@ -13,6 +14,10 @@ const Details = ({ game, images, requirements }) => {
     developer,
   } = game;
   const { os, processor, memory, graphics, storage } = requirements;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="works" id="games">
@@ -84,6 +89,9 @@ const Details = ({ game, images, requirements }) => {
                 ;
               </div>
             </div>
+          </div>
+          <div className="text-center volver">
+            <Link to="/">volver</Link>
           </div>
         </div>
       </div>

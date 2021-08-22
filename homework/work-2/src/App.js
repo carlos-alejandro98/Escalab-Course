@@ -8,8 +8,10 @@ import "./assets/css/style.css";
 import Banner from "./components/Common/Banner";
 import Footer from "./components/Common/Footer";
 
+import DetailGame from './components/DetailsGame';
 import Header from "./components/Common/Header";
 import Games from "./components/Games";
+import DetailsGamesContextProvider, { DetailsGamesContext } from "./context/DetailsGamesContext";
 
 const App = () => (
     <BrowserRouter className="wrapper">
@@ -20,6 +22,11 @@ const App = () => (
           <GamesContextProvider>
             <Games />
           </GamesContextProvider>
+        </Route>
+        <Route path="/game/:game_id">
+          <DetailsGamesContextProvider>
+            <DetailGame />
+          </DetailsGamesContextProvider>
         </Route>
       </Switch>
 

@@ -6,21 +6,10 @@ const Header = () => {
     <header>
       <nav className="navbar navbar-default" role="navigation">
         <div className="container">
-          <div className="navbar-header">
-            <a className="navbar-brand" href="#">
-              <img className="img-responsive" src={logo} alt="Logo" />
+          <div className="navbar-header col-12 w-100">
+            <a className="navbar-brand" href="/">
+              <img className="img-responsive imgHeader" src={logo} alt="Logo" />
             </a>
-          </div>
-
-          <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
-            <ul className="nav navbar-nav navbar-right">
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="#games">Games</a>
-              </li>
-            </ul>
           </div>
         </div>
       </nav>

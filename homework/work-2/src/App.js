@@ -11,7 +11,7 @@ import Footer from "./components/Common/Footer";
 import DetailGame from './components/DetailsGame';
 import Header from "./components/Common/Header";
 import Games from "./components/Games";
-import DetailsGamesContextProvider, { DetailsGamesContext } from "./context/DetailsGamesContext";
+import DetailsGamesContextProvider from "./context/DetailsGamesContext";
 
 const App = () => (
     <BrowserRouter className="wrapper">

@@ -12,6 +12,7 @@ import DetailGame from './components/DetailsGame';
 import Header from "./components/Common/Header";
 import Games from "./components/Games";
 import DetailsGamesContextProvider from "./context/DetailsGamesContext";
+import NotFound from "./components/NotFound";
 
 const App = () => (
     <BrowserRouter className="wrapper">
@@ -28,6 +29,7 @@ const App = () => (
             <DetailGame />
           </DetailsGamesContextProvider>
         </Route>
+        <Route component={NotFound} />
       </Switch>
 
       <Footer />

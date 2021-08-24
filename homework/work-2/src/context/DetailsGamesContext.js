@@ -18,10 +18,14 @@ const DetailsGamesContextProvider = ({ children }) => {
     fetch(gamesGetById(game_id))
       .then((res) => res.json())
       .then((data) => {
+        console.log(data.minimum_system_requirements);
         setDoneFetchGameDetail(true);
         !Array.isArray(data) && setGame(data);
         !Array.isArray(data) && setImages(data.screenshots);
-        !Array.isArray(data) && setRequirements(data.minimum_system_requirements);
+        data.minimum_system_requirements !== undefined ? 
+        setRequirements(data.minimum_system_requirements) : setRequirements([]);
+     
+        
       })
       .catch((err) => console.log(err));
   };

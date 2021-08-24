@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Details = ({ game, images, requirements }) => {
@@ -11,10 +11,8 @@ const Details = ({ game, images, requirements }) => {
     game_url,
     release_date,
     publisher,
-    developer,
   } = game;
   const { os, processor, memory, graphics, storage } = requirements;
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -54,26 +52,34 @@ const Details = ({ game, images, requirements }) => {
             <div className="row">
               <div className="col-md-6 col-12">
                 <h2>Minimum Requirements</h2>
-                <div className="d-flex">
-                  <strong className="align-self-center">OS:</strong>
-                  <p>{os}</p>
-                </div>
-                <div className="d-flex">
-                  <strong className="align-self-center">Processor:</strong>
-                  <p>{processor}</p>
-                </div>
-                <div className="d-flex">
-                  <strong className="align-self-center">Memory:</strong>
-                  <p>{memory}</p>
-                </div>
-                <div className="d-flex">
-                  <strong className="align-self-center">Graphics:</strong>
-                  <p>{graphics}</p>
-                </div>
-                <div className="d-flex">
-                  <strong className="align-self-center">Storage:</strong>
-                  <p>{storage}</p>
-                </div>
+
+                {requirements.length !== 0 ? (
+                  
+                  <>
+                    <div className="d-flex">
+                      <strong className="align-self-center">OS:</strong>
+                      <p>{os ? os : "No Data"}</p>
+                    </div>
+                    <div className="d-flex">
+                      <strong className="align-self-center">Processor:</strong>
+                      <p>{processor ? processor : "No Data"}</p>
+                    </div>
+                    <div className="d-flex">
+                      <strong className="align-self-center">Memory:</strong>
+                      <p>{memory ? memory : "No Data"}</p>
+                    </div>
+                    <div className="d-flex">
+                      <strong className="align-self-center">Graphics:</strong>
+                      <p>{graphics ? graphics : "No Data"}</p>
+                    </div>
+                    <div className="d-flex">
+                      <strong className="align-self-center">Storage:</strong>
+                      <p>{storage ? storage : "No Data"}</p>
+                    </div>
+                  </>
+                ) : (
+                  <h4>No Data</h4>
+                )}
               </div>
               <div className="col-md-6 col-12 p-0 boxDescription">
                 {images.map((i) => {

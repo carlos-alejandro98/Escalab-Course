@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
+import FavoriteList from "../components/FavoriteList";
 
-const Favorites = () => <p>Hello Am Favorites</p>;
-
+const Favorites = () => <FavoriteList />;
 
 export default Favorites;

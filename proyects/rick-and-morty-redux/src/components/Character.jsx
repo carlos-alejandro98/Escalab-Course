@@ -3,26 +3,20 @@ import { connect } from "react-redux";
 import propTypes from "prop-types";
 import { setFavorite, deleteFavorite } from "../actions";
 import "../assets/styles/components/Character.scss";
-import { ReactComponent as SVGStar } from "../assets/static/icons/star.svg";
+import SVGStar from "../assets/static/icons/star.svg";
 import CharacterDetail from "./CharacterDetail";
 import Modal from "./Modal";
+import useModal from "../custom-hooks/useModal";
 
 const Character = (props) => {
-  const [modal, setModal] = useState(false);
+
+  const { modal, handleCloseModal, handleOpenModal } = useModal();
   const [favorite, setFavorite] = useState(false);
 
   const { data, favoriteCharacters } = props;
   const { id, image, name, status, species, gender } = data;
 
   useEffect(() => {}, []);
-
-  const handleCloseModal = () => {
-    setModal(false);
-  };
-
-  const handleOpenModal = () => {
-    setModal(true);
-  };
 
   const handleSetFavorite = () => {
     props.setFavorite({ data });
